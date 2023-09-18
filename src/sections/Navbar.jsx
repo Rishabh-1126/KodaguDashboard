@@ -51,12 +51,16 @@ function Navbar({ open, setOpen }) {
         src="/icons.svg"
         alt="icons"
         className="w-[184px] h-[75px] hidden lg:flex"
+        width={300}
+        height={300}
       />
 
       <Image
         src="/group.svg"
         alt="options"
         className="w-[8rem] h-[3rem] hidden lg:flex"
+        width={300}
+        height={300}
       />
 
       <div className={style.profile}>

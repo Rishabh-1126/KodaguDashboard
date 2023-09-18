@@ -24,12 +24,30 @@ function Card({ tag, description, clr, imgLink, barLink, tilt }) {
           </i>
           <span style={{ color: `${clr}` }}>{tag}</span>
         </p>
-        <Image src="/plainDot.svg" alt="dot" className="w-7 h-7" />
+        <Image
+          src="/plainDot.svg"
+          alt="dot"
+          className="w-7 h-7"
+          width={300}
+          height={300}
+        />
       </div>
       <p className=" text-sm">{description}</p>
-      <Image src={barLink} alt="circles" className="w-full " />
+      <Image
+        src={barLink}
+        alt="circles"
+        className="w-full "
+        width={300}
+        height={300}
+      />
       <div className="flex items-center w-full justify-between">
-        <Image src={imgLink} alt="circles" className="w-10 h-10" />
+        <Image
+          src={imgLink}
+          alt="circles"
+          className="w-10 h-10"
+          width={300}
+          height={300}
+        />
         <p className="text-xs flex items-center gap-2 md:gap-1 md:text-xs text-[#778da9] font-semibold">
           <i className="text-lg">
             <AiOutlineClockCircle />

@@ -77,6 +77,8 @@ function Sidebar({ open, setOpen }) {
           src="/icons.svg"
           alt="icons"
           className={`w-[250px] h-[75px]  ${open ? "flex" : "hidden"}`}
+          width={300}
+          height={300}
         />
       </div>
       <div className={style.mid}>
@@ -96,7 +98,13 @@ function Sidebar({ open, setOpen }) {
                   key={i}
                 >
                   <div className={style.tags}>
-                    <Image src={ele.icon} alt="icon" className={style.icon} />
+                    <Image
+                      src={ele.icon}
+                      alt="icon"
+                      className={style.icon}
+                      width={300}
+                      height={300}
+                    />
                     <p className="text-base">{ele.name}</p>
                   </div>
                   <div className="flex gap-1">
@@ -106,6 +114,8 @@ function Sidebar({ open, setOpen }) {
                         alt="img"
                         className={style.new}
                         // className="w-10 h-10"
+                        width={300}
+                        height={300}
                       />
                     )}
                     {ele.name == "Email" && (
@@ -114,6 +124,8 @@ function Sidebar({ open, setOpen }) {
                         alt="img"
                         className={style.new}
                         // className="w-10 h-10"
+                        width={300}
+                        height={300}
                       />
                     )}
                   </div>
@@ -126,6 +138,8 @@ function Sidebar({ open, setOpen }) {
             src="/banner.png"
             alt="banner"
             className="w-[12rem] h-[12rem]"
+            width={300}
+            height={300}
           />
         </div>
       </div>
