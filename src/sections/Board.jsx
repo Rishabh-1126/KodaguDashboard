@@ -153,6 +153,7 @@ function Board() {
                 description={ele.description}
                 imgLink={ele.img}
                 barLink={ele.bar}
+                key={i}
               />
             ))}
         </div>
@@ -170,9 +171,8 @@ function Board() {
           </div>
           {ProgressInfo &&
             ProgressInfo.map((ele, i) => (
-              <div className="bg-[black] rounded-xl relative">
+              <div className="bg-[black] rounded-xl relative" key={i}>
                 <Card
-                  key={i}
                   tag={ele.tag}
                   clr={ele.color}
                   description={ele.description}
