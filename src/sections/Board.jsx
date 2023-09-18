@@ -172,7 +172,7 @@ function Board() {
             ProgressInfo.map((ele, i) => (
               <div className="bg-[black] rounded-xl relative">
                 <Card
-                  // key={i}
+                  key={i}
                   tag={ele.tag}
                   clr={ele.color}
                   description={ele.description}
@@ -197,7 +197,7 @@ function Board() {
           {Done &&
             Done.map((ele, i) => (
               <Card
-                // key={i}
+                key={i}
                 tag={ele.tag}
                 clr={ele.color}
                 description={ele.description}
@@ -237,7 +237,7 @@ function Board() {
           {TodoListInfo &&
             TodoListInfo.map((ele, i) => (
               <Card
-                // key={i}
+                key={i}
                 tag={ele.tag}
                 clr={ele.color}
                 description={ele.description}
