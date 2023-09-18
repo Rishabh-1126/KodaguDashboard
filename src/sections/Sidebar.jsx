@@ -5,6 +5,7 @@ import { Options } from "@/components/Menus";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineRight } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
+import Image from "next/image";
 const style = {
   wrapper: `flex fixed max-w-[350px] min-w-[300px] w-full flex-col rounded-xl  h-full p-4 bg-[#15132B] transition-transform duration-300 ease-in-out lg:transition-none lg:flex mr-2 `,
   title: `flex my-1 text-xl justify-around text-lg font-semibold`,
@@ -72,7 +73,7 @@ function Sidebar({ open, setOpen }) {
         />
       </div>
       <div className="w-full flex justify-center">
-        <img
+        <Image
           src="/icons.svg"
           alt="icons"
           className={`w-[250px] h-[75px]  ${open ? "flex" : "hidden"}`}
@@ -95,12 +96,12 @@ function Sidebar({ open, setOpen }) {
                   key={i}
                 >
                   <div className={style.tags}>
-                    <img src={ele.icon} alt="icon" className={style.icon} />
+                    <Image src={ele.icon} alt="icon" className={style.icon} />
                     <p className="text-base">{ele.name}</p>
                   </div>
                   <div className="flex gap-1">
                     {ele.img && (
-                      <img
+                      <Image
                         src={ele.img}
                         alt="img"
                         className={style.new}
@@ -108,7 +109,7 @@ function Sidebar({ open, setOpen }) {
                       />
                     )}
                     {ele.name == "Email" && (
-                      <img
+                      <Image
                         src="/downarrow.svg"
                         alt="img"
                         className={style.new}
@@ -121,7 +122,11 @@ function Sidebar({ open, setOpen }) {
           </div>
         </div>
         <div className={style.banner}>
-          <img src="/banner.png" alt="banner" className="w-[12rem] h-[12rem]" />
+          <Image
+            src="/banner.png"
+            alt="banner"
+            className="w-[12rem] h-[12rem]"
+          />
         </div>
       </div>
     </div>

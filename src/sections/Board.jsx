@@ -1,6 +1,7 @@
 import Card from "@/components/Card";
 import { GoCommentDiscussion } from "react-icons/go";
 import { TodoListInfo, ProgressInfo, Done } from "@/components/Menus";
+import Image from "next/image";
 import "@/components/style.css";
 const style = {
   wrapper: `flex w-full h-full bg-[#0D0B21] flex-col  mt-5   w-full`,
@@ -19,7 +20,7 @@ function Board() {
     <div className={style.wrapper}>
       <div className={style.info}>
         <div className="flex gap-2 w-full ">
-          <img src="/btnback.svg" alt="back" className="w-8 h-8" />
+          <Image src="/btnback.svg" alt="back" className="w-8 h-8" />
           <div className={style.leftInfo}>
             <div className="flex flex-col gap-2">
               <p className="font-bold text-lg">School November Tasks</p>
@@ -35,11 +36,11 @@ function Board() {
                 <p className="text-xs">Sunnyvale,Ca</p>
               </div>
               <span className="p-1 rounded-xl bg-[white]">
-                <img src="/logo.svg" alt="logo" className="w-9 h-9  " />
+                <Image src="/logo.svg" alt="logo" className="w-9 h-9  " />
               </span>
             </div>
           </div>
-          <img src="/threedot.svg" alt="dot" className="w-6 h-6 " />
+          <Image src="/threedot.svg" alt="dot" className="w-6 h-6 " />
         </div>
 
         <div
@@ -50,13 +51,13 @@ function Board() {
           }}
         >
           <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-            <img
+            <Image
               src="/peopleCircle.svg"
               alt="circle"
               className="w-[8rem] hidden lg:flex"
             />
             <button className="py-2 px-3 rounded-xl focus:border-white-500 focus:border-2  bg-[#8338ec] text-white flex items-center gap-2">
-              <img src="/add-friend.svg" alt="friend" className="w-5 h-5 " />
+              <Image src="/add-friend.svg" alt="friend" className="w-5 h-5 " />
               <p className="text-base md:text-xs">Invite People</p>
             </button>
             <button className="py-2 px-4 rounded-xl   bg-[black] border-[#8338ec] border-2 text-sm md:text-xs">
@@ -109,7 +110,11 @@ function Board() {
           <div className={style.head}>
             <p className="text-base ">To-Do-List(24)</p>
             <span className="flex items-center justify-center">
-              <img src="/btnAdd.svg" alt="ad" className="w-[36px] h-[36px] " />
+              <Image
+                src="/btnAdd.svg"
+                alt="ad"
+                className="w-[36px] h-[36px] "
+              />
             </span>
           </div>
           {TodoListInfo &&
@@ -128,7 +133,7 @@ function Board() {
         <div className={`${style.columns} `}>
           <div className={style.head}>
             <p className="text-base">In Progress(2)</p>
-            <img src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
+            <Image src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
           </div>
           {ProgressInfo &&
             ProgressInfo.map((ele, i) => (
@@ -148,7 +153,7 @@ function Board() {
         <div className={`${style.columns} `}>
           <div className={style.head}>
             <p className="text-base">Done(3)</p>
-            <img src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
+            <Image src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
           </div>
           {Done &&
             Done.map((ele, i) => (
@@ -165,7 +170,7 @@ function Board() {
         <div className={`${style.columns} `}>
           <div className={style.head}>
             <p className="text-base">Revised(0)</p>
-            <img src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
+            <Image src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
           </div>
           <div className="flex flex-col p-4 gap-4 w-full bg-[#211A75] rounded-xl">
             <div className="py-3 px-4 bg-[#15132B] capitalize border-2 border-[#7879F1] text-[#7879F1] border-dotted rounded-lg">
@@ -176,7 +181,7 @@ function Board() {
         <div className={`${style.columns} `}>
           <div className={style.head}>
             <p className="text-base ">Contant(2)</p>
-            <img src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
+            <Image src="/btnAdd2.svg" alt="ad" className="w-[36px] h-[36px]" />
           </div>
           {TodoListInfo &&
             TodoListInfo.map((ele, i) => (

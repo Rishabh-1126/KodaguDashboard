@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BsDot } from "react-icons/bs";
@@ -23,12 +24,12 @@ function Card({ tag, description, clr, imgLink, barLink, tilt }) {
           </i>
           <span style={{ color: `${clr}` }}>{tag}</span>
         </p>
-        <img src="/plainDot.svg" alt="dot" className="w-7 h-7" />
+        <Image src="/plainDot.svg" alt="dot" className="w-7 h-7" />
       </div>
       <p className=" text-sm">{description}</p>
-      <img src={barLink} alt="circles" className="w-full " />
+      <Image src={barLink} alt="circles" className="w-full " />
       <div className="flex items-center w-full justify-between">
-        <img src={imgLink} alt="circles" className="w-10 h-10" />
+        <Image src={imgLink} alt="circles" className="w-10 h-10" />
         <p className="text-xs flex items-center gap-2 md:gap-1 md:text-xs text-[#778da9] font-semibold">
           <i className="text-lg">
             <AiOutlineClockCircle />
