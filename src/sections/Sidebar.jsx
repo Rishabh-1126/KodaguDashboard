@@ -7,7 +7,7 @@ import { AiOutlineRight } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 import Image from "next/image";
 const style = {
-  wrapper: `flex fixed max-w-[350px] min-w-[300px] w-full flex-col rounded-xl  h-full p-4 bg-[#15132B] transition-transform duration-300 ease-in-out lg:transition-none lg:flex mr-2 `,
+  wrapper: `flex fixed max-w-[350px] min-w-[300px] w-full flex-col rounded-xl  lg:h-full p-4 bg-[#15132B] transition-transform duration-300 ease-in-out lg:transition-none lg:flex mr-2 `,
   title: `flex my-1 text-xl justify-around text-lg font-semibold`,
   mid: `flex my-2 pt-2 flex-col  w-full h-full justify-between  `,
   menu: `flex flex-col  p-2 `,
@@ -72,15 +72,7 @@ function Sidebar({ open, setOpen }) {
           className={`text-lg lg:text-base text-[white] placeholder-[white]-500 tracking-wide  border-0 bg-transparent focus:outline-none py-1 px-2`}
         />
       </div>
-      <div className="w-full flex justify-center">
-        <Image
-          src="/icons.svg"
-          alt="icons"
-          className={`w-[250px] h-[75px]  ${open ? "flex" : "hidden"}`}
-          width={300}
-          height={300}
-        />
-      </div>
+
       <div className={style.mid}>
         <div className={style.menu}>
           <div className={style.head}>MAIN MENU</div>
@@ -111,16 +103,6 @@ function Sidebar({ open, setOpen }) {
                     {ele.img && (
                       <Image
                         src={ele.img}
-                        alt="img"
-                        className={style.new}
-                        // className="w-10 h-10"
-                        width={300}
-                        height={300}
-                      />
-                    )}
-                    {ele.name == "Email" && (
-                      <Image
-                        src="/downarrow.svg"
                         alt="img"
                         className={style.new}
                         // className="w-10 h-10"

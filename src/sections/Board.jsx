@@ -1,6 +1,8 @@
 import Card from "@/components/Card";
 import { GoCommentDiscussion } from "react-icons/go";
+import { BsPeopleFill } from "react-icons/bs";
 import { TodoListInfo, ProgressInfo, Done } from "@/components/Menus";
+
 import Image from "next/image";
 import "@/components/style.css";
 const style = {
@@ -61,14 +63,8 @@ function Board() {
           />
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            padding: "0px 30px",
-          }}
-        >
-          <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
+        <div className="flex flex-col lg:flex-row w-full items-start lg:items-center jsutify-between gap-4 lg:gap-0 pl-[25px] lg:py-0 lg:px-30  flex-wrap">
+          <div className="flex gap-[15px]  flex-wrap">
             <Image
               src="/peopleCircle.svg"
               alt="circle"
@@ -77,51 +73,31 @@ function Board() {
               height={300}
             />
             <button className="py-2 px-3 rounded-xl focus:border-white-500 focus:border-2  bg-[#8338ec] text-white flex items-center gap-2">
-              <Image
-                src="/add-friend.svg"
-                alt="friend"
-                className="w-5 h-5 "
-                width={300}
-                height={300}
-              />
-              <p className="text-base md:text-xs">Invite People</p>
+              <i className="text-white text-xs lg:text-base">
+                <BsPeopleFill />
+              </i>
+              <p className="text-xs lg:text-base">Invite People</p>
             </button>
-            <button className="py-2 px-4 rounded-xl   bg-[black] border-[#8338ec] border-2 text-sm md:text-xs">
+            <button className="py-2 px-4 rounded-xl   bg-[black] border-[#8338ec] border-2 text-xs lg:text-base">
               Private
             </button>
-            <button className="py-2 px-4  rounded-xl   bg-[#7879f1]   text-sm md:text-xs">
+            <button className="py-2 px-4  rounded-xl   bg-[#7879f1]   text-xs lg:text-base">
               Edit
             </button>
             <button className="py-2 px-3 rounded-xl flex gap-2 items-center bg-[black] border-2 border-[#8338ec] focus:border-2 ">
-              <i className="text-lg md:text-sm">
+              <i className="text-xs lg:text-base">
                 <GoCommentDiscussion />
               </i>
-              <p className="text-sm md:text-xs">45 Comments</p>
+              <p className="text-xs lg:text-base">45 Comments</p>
             </button>
           </div>
           <div
             className="flex
-          items-center "
+            items-center flex-wrap gap-2 lg:items-center lg:ml-[20px] "
           >
-            <p className="mr-[15px] text-xs font-semibold">
-              Total Progress 60%
-            </p>
-            <div
-              style={{
-                height: "10px",
-                background: "#edf2f7",
-                width: "300px",
-                borderRadius: "20px",
-              }}
-            >
-              <div
-                style={{
-                  width: "60%",
-                  background: "#805ad5",
-                  height: "100%",
-                  borderRadius: "20px",
-                }}
-              />
+            <p className="text-xs lg:text-base ">Total Progress 60%</p>
+            <div className="   h-[9px] bg-[#edf2f7] w-[150px] lg:w-[250px] rounded-full">
+              <div className="w-[60%] bg-[#805ad5] h-full rounded-full " />
             </div>
           </div>
         </div>

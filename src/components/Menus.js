@@ -29,7 +29,7 @@ export const Options = [
     name: `Contact`,
     icon: `/contact 1.svg`,
     status: `inactive`,
-    img: `/new.svg`,
+    // img: `/new.svg`,
   },
   {
     name: `Calendar`,
